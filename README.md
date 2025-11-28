@@ -19,11 +19,11 @@ A polished, WinForms-based chess application written in C# (.NET Framework 4.7.2
 
 - Windows 7 / 8 / 10 / 11
 - Visual Studio 2017 or later (or any IDE that supports .NET Framework WinForms projects)
-- .NET Framework 4.7.2
+- .NET Framework 4.8
 
 ## Open & Build
 
-1. Open `src/Chess.csproj` with Visual Studio.
+1. Open `src/ChessGame.csproj` with Visual Studio.
 2. Build (Ctrl+Shift+B) and run (F5).
 
 Alternatively, from PowerShell you can build with msbuild (Visual Studio Developer Command Prompt or any environment where `msbuild` is available):
