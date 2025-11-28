@@ -29,7 +29,7 @@ A polished, WinForms-based chess application written in C# (.NET Framework 4.7.2
 Alternatively, from PowerShell you can build with msbuild (Visual Studio Developer Command Prompt or any environment where `msbuild` is available):
 
 ```powershell
-msbuild src\Chess.csproj /p:Configuration=Debug
+msbuild src\ChessGame.csproj /p:Configuration=Debug
 ```
 
 Then run the produced executable in `bin\Debug\`.
