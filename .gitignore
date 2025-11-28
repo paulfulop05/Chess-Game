@@ -1,11 +1,29 @@
-﻿# Build outputs
+﻿# Build artifacts
 bin/
 obj/
 
-# VS user settings
+# Visual Studio
 .vs/
+
+# User-specific files
 *.user
 *.suo
 
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+
 # Logs
 *.log
+
+# Build output
+*.dll
+*.exe
+*.pdb
+
+# Cache / temp
+*.tmp
+*.cache
+*.db
+*.opendb
