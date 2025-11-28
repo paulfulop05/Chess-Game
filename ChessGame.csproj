@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C027FA17-9218-408D-85E9-D4759A9B0F73}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChessGame</RootNamespace>
+    <AssemblyName>ChessGame</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Cell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ChessBoard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ChessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ChessForm.Designer.cs">
+      <DependentUpon>ChessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\ForgotPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\ForgotPassForm.Designer.cs">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\GameEndForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\GameEndForm.Designer.cs">
+      <DependentUpon>GameEndForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Pieces\Bishop.cs" />
+    <Compile Include="src\Pieces\King.cs" />
+    <Compile Include="src\Pieces\Knight.cs" />
+    <Compile Include="src\Pieces\Pawn.cs" />
+    <Compile Include="src\Pieces\Piece.cs" />
+    <Compile Include="src\Pieces\Queen.cs" />
+    <Compile Include="src\Pieces\Rook.cs" />
+    <Compile Include="src\PromotingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PromotingForm.Designer.cs">
+      <DependentUpon>PromotingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\ChessForm.resx">
+      <DependentUpon>ChessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\ForgotPassForm.resx">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\GameEndForm.resx">
+      <DependentUpon>GameEndForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PromotingForm.resx">
+      <DependentUpon>PromotingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gitignore.txt" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="src\resurse\20seconds.mp3" />
+    <Content Include="src\resurse\bB.png" />
+    <Content Include="src\resurse\bK.png" />
+    <Content Include="src\resurse\bN.png" />
+    <Content Include="src\resurse\bP.png" />
+    <Content Include="src\resurse\bQ.png" />
+    <Content Include="src\resurse\bR.png" />
+    <Content Include="src\resurse\capture.mp3" />
+    <Content Include="src\resurse\ChessIcon.ico" />
+    <Content Include="src\resurse\ChessImg.png" />
+    <Content Include="src\resurse\chess_icon.png" />
+    <Content Include="src\resurse\chess_knight.png" />
+    <Content Include="src\resurse\game-end.mp3" />
+    <Content Include="src\resurse\game-start.mp3" />
+    <Content Include="src\resurse\HidePass.png" />
+    <Content Include="src\resurse\illegal.mp3" />
+    <Content Include="src\resurse\move-check.mp3" />
+    <Content Include="src\resurse\move.mp3" />
+    <Content Include="src\resurse\Padlock.png" />
+    <Content Include="src\resurse\PadlockNew.png" />
+    <Content Include="src\resurse\Padlock_Unlocked.png" />
+    <Content Include="src\resurse\ShowPass.png" />
+    <Content Include="src\resurse\User.png" />
+    <Content Include="src\resurse\wB.png" />
+    <Content Include="src\resurse\wK.png" />
+    <Content Include="src\resurse\wN.png" />
+    <Content Include="src\resurse\wP.png" />
+    <Content Include="src\resurse\wQ.png" />
+    <Content Include="src\resurse\wR.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
